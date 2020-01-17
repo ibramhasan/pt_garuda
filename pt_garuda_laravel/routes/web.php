@@ -17,3 +17,11 @@ Route::get('/', function () {
 Route::prefix('admin')->namespace('Admin')->group(function(){
   Route::get('/', 'DashboardController@index')->name('dashboard');
 });
+
+// karyawan
+
+
+// OB
+
+
+// HRD
