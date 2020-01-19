@@ -26,7 +26,7 @@
       <span>Data HRD</span></a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{ route('officeboy.index') }}">
       <i class="fas fa-fw fa-dollar-sign"></i>
       <span>Data Office Boy</span></a>
   </li>

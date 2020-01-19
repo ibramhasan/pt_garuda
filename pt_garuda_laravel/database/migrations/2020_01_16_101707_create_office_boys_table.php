@@ -15,6 +15,12 @@ class CreateOfficeBoysTable extends Migration
     {
         Schema::create('office_boys', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nama', 50);
+            $table->string('status', 50);
+            $table->string('foto');
+            $table->string('alamat');
+            $table->string('email');
+            $table->string('tanggal_masuk');
             $table->timestamps();
         });
     }

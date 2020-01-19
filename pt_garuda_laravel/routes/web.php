@@ -12,8 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
-Route::prefix('admin')->namespace('Admin')->group(function(){
+Route::prefix('admin')->namespace('Admin')->group(function () {
   Route::get('/', 'DashboardController@index')->name('dashboard');
+  Route::resource('officeboy', 'OBoyController');
 });
