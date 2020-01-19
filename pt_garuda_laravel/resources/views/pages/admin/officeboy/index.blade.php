@@ -34,7 +34,7 @@
                         <tbody>
                             @forelse($items as $item)
                             <tr>
-                                <td>{{$item->id}}</td>
+                                <td>{{$loop->iteration}}</td>
                                 <td>{{$item->nama}}</td>
                                 <td>{{$item->status}}</td>
                                 <td class="text-center"><img src="/fotoOB/{{$item->foto}}" width="110" height="100"></td>

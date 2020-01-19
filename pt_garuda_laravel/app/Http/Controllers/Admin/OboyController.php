@@ -86,7 +86,8 @@ class OboyController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = OfficeBoy::findOrFail($id);
+        return view('pages.admin.officeboy.edit', ['item' => $item]);
     }
 
     /**
@@ -98,7 +99,40 @@ class OboyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'status' => 'required',
+            'foto' => 'file|mimes:jpeg,png,jpg|max:2048',
+            'alamat' => 'required',
+            'email' => 'required',
+            'tanggal_masuk' => 'required'
+        ]);
+
+        $data = OfficeBoy::where('id', $id)->first();
+        $data->nama = $request->nama;
+        $data->status = $request->status;
+        $data->alamat = $request->alamat;
+        $data->email = $request->email;
+        $data->tanggal_masuk = $request->tanggal_masuk;
+
+        if ($request->file('foto') == "") {
+            $data->foto = $data->foto;
+        } else {
+            if ($request->hasFile('foto')) {
+                // Replace Gambar Baru
+                $file = 'fotoOB/' . $data->foto;
+                if (is_file($file)) {
+                    unlink($file);
+                }
+                $file = $request->file('foto');
+                $filename = $file->getClientOriginalName();
+                $request->file('foto')->move('fotoOB/', $filename);
+                $data->foto = $filename;
+            }
+        }
+
+        $data->save();
+        return redirect()->route('officeboy.index');
     }
 
     /**
@@ -109,6 +143,10 @@ class OboyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Destroy file
+        $item = OfficeBoy::findOrFail($id);
+        $item->delete();
+
+        return redirect()->route('officeboy.index');
     }
 }
