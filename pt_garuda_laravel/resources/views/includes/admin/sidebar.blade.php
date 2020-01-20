@@ -16,18 +16,18 @@
       <span>Dashboard</span></a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="index.html">
-      <i class="fas fa-fw fa-hotel"></i>
+    <a class="nav-link" href="{{ route('karyawan.index') }}">
+      <i class='fas fa-address-card' style='font-size:24px'></i>
       <span>Data Karyawan</span></a>
   </li>
   <li class="nav-item active">
     <a class="nav-link" href="index.html">
-      <i class="fas fa-fw fa-image"></i>
+      <i class='fas fa-address-card' style='font-size:24px'></i>
       <span>Data HRD</span></a>
   </li>
   <li class="nav-item active">
     <a class="nav-link" href="index.html">
-      <i class="fas fa-fw fa-dollar-sign"></i>
+    <i class='fas fa-address-card' style='font-size:24px'></i>
       <span>Data Office Boy</span></a>
   </li>
 

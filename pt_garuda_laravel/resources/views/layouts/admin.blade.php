@@ -27,7 +27,9 @@
         <div id="content">
 
           @include('includes.admin.navbar')
-
+          @yield('karyawan-list')
+          @yield('karyawan-create')
+          @yield('karyawan-update')
           @yield('content')
 
         </div>

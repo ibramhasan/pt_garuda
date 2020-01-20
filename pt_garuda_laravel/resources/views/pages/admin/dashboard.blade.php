@@ -18,11 +18,11 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Paket Data</div>
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Jadwal Penerbangan</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800">600</div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class='fas fa-calendar-alt' style='font-size:24px'></i>
             </div>
           </div>
         </div>
@@ -35,11 +35,11 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Transaksi</div>
+              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Promo Imlek</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+              <i class='fas fa-dollar-sign' style='font-size:24px'></i>
             </div>
           </div>
         </div>
@@ -52,15 +52,16 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Status</div>
-              <div class="row no-gutters align-items-center">
+              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Departure</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">180</div>
+              <!-- <div class="row no-gutters align-items-center">
                 <div class="col-auto">
                   <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Pending</div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="col-auto">
-              <i class="fas fa-spinner fa-2x text-gray-300"></i>
+              <i class='fas fa-plane-departure' style='font-size:24px'></i>
             </div>
           </div>
         </div>
@@ -73,11 +74,11 @@
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Success</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Landing</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">180</div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-check fa-2x text-gray-300"></i>
+              <i class='fas fa-plane-arrival' style='font-size:24px'></i>
             </div>
           </div>
         </div>

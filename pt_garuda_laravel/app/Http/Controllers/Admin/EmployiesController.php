@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Employies;
+use App\Http\Controllers\Controller;
 
-class OBController extends Controller
+class EmployiesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,8 @@ class OBController extends Controller
      */
     public function index()
     {
-        //
+        $karyawan= Employies::all();
+        return view('karyawan.karyawan_list', compact('karyawan'));
     }
 
     /**
@@ -23,7 +26,8 @@ class OBController extends Controller
      */
     public function create()
     {
-        //
+        $karyawan= Employies::all();
+        return view('karyawan.karyawan_create', compact('karyawan'));
     }
 
     /**
