@@ -12,17 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('pages.admin.dashboard');
+  return view('pages.admin.dashboard');
 });
-Route::prefix('admin')->namespace('Admin')->group(function(){
+Route::prefix('admin')->namespace('Admin')->group(function () {
   Route::get('/', 'DashboardController@index')->name('dashboard');
   Route::resource('karyawan', 'EmployiesController');
+  Route::resource('officeboy', 'OBoyController');
 });
-
-// karyawan
-
-
-// OB
-
-
-// HRD

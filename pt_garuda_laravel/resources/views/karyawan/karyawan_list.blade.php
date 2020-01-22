@@ -14,6 +14,7 @@
         <th scope="col">Divisi</th>
         <th scope="col">Tanggal Masuk</th>
         <th scope="col">Opsi</th>
+        <th scope="col">Opsi</th>
       </tr>
     </thead>
     <tbody>
@@ -22,21 +23,31 @@
         <td>{{$employ->id}}</td>
         <td>{{$employ->nama_karyawan}}</td>
         <td>{{$employ->status_karyawan}}</td>
-        <td>{{$employ->foto_karyawan}}</td>
+        <td>
+          <img src="/fotokaryawan/{{$employ->foto_karyawan}}" alt="?" style="height:60px;width:60px;">
+        </td>
         <td>{{$employ->alamat_karyawan}}</td>
         <td>{{$employ->email_karyawan}}</td>
         <td>{{$employ->divisi}}</td>
         <td>{{$employ->tanggal_masuk}}</td>
         <td>
-          <a href="#">
+          <a href="{{ route('karyawan.edit', $employ->id) }}">
             <i class='far fa-edit' style='font-size:24px'></i>
           </a>
-          <i class="fa fa-trash-alt" style='font-size:24px'></i>
+        </td>
+        <td>
+          <form class="" action="{{ route('karyawan.destroy', $employ->id) }}" method="post">
+            @csrf
+            @method('delete')
+            <button name="button" class="btn btn-danger">
+              <i class="fa fa-trash"></i>
+            </button>
+          </form>
         </td>
       </tr>
       @empty
       <tr>
-        <td colspan="7" class="text-center">Data Kosong</td>
+        <td colspan="6" class="text-center">Data Kosong</td>
       </tr>
     </tbody>
     @endforelse

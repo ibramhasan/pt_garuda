@@ -17,18 +17,13 @@
                     </ul>
                 </div>
               @endif
-              <form class="" action="{{route('karyawan.create')}}" method="post">
+              <form class="" action="{{route('karyawan.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="row justify-content-center">
-                      <div class="col-sm-5">
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"><label >ID</label></div>
-                        <input type="text" name="id" class="form-control">
-                        <small id="emailHelp" class="form-text text-muted">Contoh: 001</small>
-                      </div>
-                      <div class="col-sm-5">
+                      <div class="col-sm-10">
                         <div class="h5 mb-0 font-weight-bold text-gray-800"><label >Nama Karyawan</label></div>
-                        <input type="text" name="nama_karyawan" class="form-control">
+                        <input type="text" name="nama_karyawan" class="form-control" value="{{ old('nama_karyawan')}}">
                         <small id="emailHelp" class="form-text text-muted">Contoh: Hasan Ibrahim</small>
                       </div>
                     </div>
